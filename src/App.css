@@ -1,0 +1,135 @@
+/* src/App.css */
+
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f9fafb;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  box-sizing: border-box;
+  background: radial-gradient(circle at top, #fef3c7, #e0f2fe, #f9fafb);
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0 0 8px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.story-container {
+  flex: 1;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .story-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.story-card {
+  border: none;
+  border-radius: 18px;
+  padding: 16px 18px;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border 0.12s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.18);
+}
+
+.story-card-selected {
+  outline: 3px solid #fb923c;
+  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.3);
+}
+
+.story-title {
+  margin: 0 0 4px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+.story-subtitle {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 600;
+}
+
+.story-description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.action-area {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.start-button {
+  padding: 12px 32px;
+  border-radius: 999px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(to right, #f97316, #ec4899);
+  color: white;
+  box-shadow: 0 10px 25px rgba(236, 72, 153, 0.5);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(236, 72, 153, 0.6);
+}
+
