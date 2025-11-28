@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import StorySelectPage from "../pages/StorySelectPage";
-import LoadingPage from "../pages/LoadingPage";
+import StorySelectPage from "./pages/StorySelectPage";
+import LoadingPage from "./pages/LoadingPage";
 //import StoryReadPage from "./StoryReadPage";
 
 function App() {
