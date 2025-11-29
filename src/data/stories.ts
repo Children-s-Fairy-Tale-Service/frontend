@@ -9,7 +9,9 @@ export type Story = {
   id: string;          // 라우팅에 쓸 id (예: "pet", "cape", "cheetah")
   title: string;       // 동화 제목
   subtitle: string;    // 한 줄 설명
-  emoji: string;       // 대표 이모지
+  emoji: string;      // 대표 이모지
+  colorClass: string;
+  description: string;
   pages: StoryPage[];  // 실제 동화 내용 (페이지별)
 };
 
@@ -19,6 +21,8 @@ export const STORIES: Story[] = [
     title: "줄스의 완벽한 동물 찾기",
     subtitle: "어떤 친구와 함께할까?",
     emoji: "🐶",
+    colorClass: "from-sky-100 to-blue-200",
+    description: "사자부터 앵무새까지! 줄스가 꿈꾸는 동물 친구를 찾아가는 귀여운 이야기예요.",
     pages: [
       {
         page: 1,
@@ -93,6 +97,8 @@ export const STORIES: Story[] = [
     title: "망토를 주웠어!",
     subtitle: "진짜 내 것이 될 수 있을까?",
     emoji: "🦸‍♂️",
+    colorClass: "from-pink-100 to-rose-200",
+    description: "우연히 주운 멋있는 망토… 하지만 망토는 정말 주인이 없는 걸까?",
     pages: [
       {
         page: 1,
@@ -172,6 +178,9 @@ export const STORIES: Story[] = [
     title: "엄마 치타랑 씽씽",
     subtitle: "느려도 괜찮아, 함께 달리는 우리",
     emoji: "🐆",
+    colorClass: "from-sky-100 to-blue-200",
+
+    description: "엄마와 아기 치타의 따뜻한 달리기 여행. ‘느려도 괜찮아’라는 마음을 담았어요.",
     pages: [
       {
         page: 1,
@@ -181,33 +190,54 @@ export const STORIES: Story[] = [
       {
         page: 2,
         text:
-          "엄마 치타가 씽씽 달리면 펄펄, 꽃잎이 많이 날리고 아기 치타가 씽 달리면 폴폴, 꽃잎이 조금 날려요.",
+          "엄마 치타가 씽씽 달리면 펄펄, 꽃잎이 많이 날리고",
       },
       {
         page: 3,
         text:
-          "엄마 치타가 씽씽 달리면 첨벙첨벙, 물이 높게 튀고 아기 치타가 씽 달리면 참방참방, 물이 낮게 튀어요.",
+          "아기 치타가 씽 달리면 폴폴, 꽃잎이 조금 날려요.",
       },
       {
         page: 4,
         text:
-          "엄마 치타가 씽씽 달리면 펄쩍, 풀잎 위 구름에 가깝고 아기 치타가 씽 달리면 폴짝, 구름 아래 풀잎에 가까워요.",
+          "엄마 치타가 씽씽 달리면 첨벙첨벙, 물이 높게 튀고",
       },
       {
         page: 5,
         text:
-          "엄마 치타가 후다닥, 언덕을 빨리 올라가면 아기 치타는 느릿느릿, 천천히 올라가요.",
+          "아기 치타가 씽 달리면 참방참방, 물이 낮게 튀어요.",
       },
       {
         page: 6,
         text:
-          "엄마 치타는 아기 치타와 멀어지면 멈춰 서서 기다리다 아기 치타를 꼬옥 안아 줘요.",
+          "엄마 치타가 씽씽 달리면 펄쩍, 풀잎 위 구름에 가깝고",
       },
       {
         page: 7,
         text:
-          "“예쁜 우리 아기, 느려도 괜찮아! 엄마는 언제나 너를 기다릴 거야. 사랑해!”",
+          "아기 치타가 씽 달리면 폴짝, 구름 아래 풀잎에 가까워요.",
       },
+      {
+        page: 8,
+        text:
+          "엄마 치타가 후다닥, 언덕을 빨리 올라가면"
+      },
+      {
+        page: 9,
+        text:
+          "아기 치타는 느릿느릿, 천천히 올라가요."
+      },
+      {
+        page: 10,
+        text:
+          "엄마 치타는 아기 치타와 멀어지면 멈춰 서서 기다리다"
+      },
+      {
+        page: 11,
+        text:
+          "아기 치타를 꼬옥 안아 줘요. \"예쁜 우리 아기, 느려도 괜찮아! 엄마는 언제나 너를 기다릴 거야. 사랑해!\""
+      },
+      
     ],
   },
 ];
