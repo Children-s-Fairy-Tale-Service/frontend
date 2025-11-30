@@ -23,7 +23,7 @@ function QuizPage() {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
+  console.log(API_BASE)
   // ✅ 퀴즈 요청
   useEffect(() => {
     if (!story) return;
