@@ -39,11 +39,11 @@ function QuizPage() {
 
         // 동화 전체 텍스트 하나로 합치기 (페이지 기준)
         const fullStoryText = story.pages.map((p) => p.text).join(" ");
-
+        const fullcaptions = story.caption
         // TODO: 실제 캡션이 있으면 여기에 넣으면 됨
         const requestBody = {
           stories: [fullStoryText], // 현재는 1개 동화만 보냄
-          captions: [],             // 캡션 있으면 ["...", "..."] 이렇게 채우기
+          captions: fullcaptions,             // 캡션 있으면 ["...", "..."] 이렇게 채우기
           n_quizzes: 5,
         };
 
