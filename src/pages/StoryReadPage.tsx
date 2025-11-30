@@ -25,7 +25,7 @@ function StoryReadPage() {
   const isLast = pageIndex === story.pages.length - 1;
   const pageNumber = String(page.page).padStart(2, "0");
   // 예: public/images/cheetah/1.webp
-  const imageSrc = `/images/${story.id}/image${pageNumber}.png`;
+  const imageSrc = `/images/${story.id}/image${pageNumber}.webp`;
   console.log(imageSrc)
   const goQuiz = () => {
     if (!id) return;
