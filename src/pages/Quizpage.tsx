@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { STORIES } from "../data/stories";
-
+const API_BASE = import.meta.env.VITE_BACKEND_URL;
 type QuizItem = {
   quiz: string;
   answer: string;
@@ -49,7 +49,7 @@ function QuizPage() {
 
         // 👉 백엔드 실제 URL 로 바꾸기
         // 예: http://localhost:8000/quizzes/generation 이라면 그걸로
-        const response = await fetch("http://localhost:8000/quizzes/generation", {
+        const response = await fetch(`${API_BASE}/quizzes/generation`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

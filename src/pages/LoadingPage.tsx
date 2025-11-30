@@ -16,7 +16,7 @@ function LoadingPage() {
   useEffect(() => {
     const stepTimer = setInterval(() => {
       setStepIndex((prev) => (prev + 1) % steps.length);
-    }, 2500);
+    }, 2000);
 
     const doneTimer = setTimeout(() => {
       if (id) {
